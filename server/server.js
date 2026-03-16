@@ -18,6 +18,7 @@ app.use(cors({
     "http://localhost:5174",
     "http://localhost:5177",
     "http://localhost:5001",
+    "https://postify-eosin.vercel.app",
   ],
   credentials: true,
 }));
