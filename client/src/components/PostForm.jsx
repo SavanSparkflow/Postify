@@ -37,13 +37,12 @@ const PostForm = ({ onGenerate, loading }) => {
         
         setImageLoading(true);
         try {
-            toast.loading("Generating 3 artistic samples...", { id: "gen-img" });
+            toast.loading("Generating 2 samples...", { id: "gen-img" });
             
             // Generate 3 images for variety
             const promises = [
                 window.puter.ai.txt2img(idea + " digital art style", { model: "gemini-2.5-flash-image-preview" }),
                 window.puter.ai.txt2img(idea + " cinematic lighting", { model: "gemini-2.5-flash-image-preview" }),
-                window.puter.ai.txt2img(idea + " professional photography", { model: "gemini-2.5-flash-image-preview" })
             ];
             
             const results = await Promise.all(promises);
